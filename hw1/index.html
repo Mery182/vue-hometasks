@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- vue  -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <!--  -->
+</head>
+<body>
+    <div id="app">
+       <ol>
+           <li v-for="cat in cats">
+               <img v-bind:src="cat.img" >
+              <h3>Имя: {{cat.name}} </h3>
+              <span>Возраст: {{cat.age}} </span>
+              <span>Окрас: {{cat.color}} </span>
+              <a href="#">Подробнее <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#949494" viewBox="0 0 24 24" ><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z" ></path></svg></a>
+           </li>
+         
+       </ol>
+    </div>
+
+    <script  src="js/main.js"></script>
+</body>
+</html>

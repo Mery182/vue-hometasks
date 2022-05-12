@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main2.css">
+     <!-- vue  -->
+ <script src="https://unpkg.com/vue@next"></script>
+ <!--  -->
+</head>
+<body>
+
+
+<div id="app">
+<div class="all-button">
+<button @click="addfirstClass"> {{ buttonTextone }} </button>
+<button @click="addsecondClass"> {{ buttonTexttwo }} </button>
+</div>
+<div :class="[{'blok': active }, {'blok-two': another}]">
+ <div  v-for="article in articles" >
+    <img v-bind:title="article.title" :src="article.image" alt="article.title">
+     <h3>{{ article.title.toUpperCase() }} </h3>
+    
+ </div>
+</div>
+
+
+</div>
+
+
+
+   <script src="js/main2.js"></script> 
+</body>
+</html>

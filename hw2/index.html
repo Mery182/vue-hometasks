@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+ <!-- vue  -->
+ <script src="https://unpkg.com/vue@next"></script>
+ <!--  -->
+</head>
+
+<body>
+
+    <div id="app">
+    <button @click="sortByCountPlus">По возрастанию количества</button>
+    <button @click="sortByCountMinus">По убыванию количества</button>
+    <button @click="sortByName">В алфавитном порядке</button>
+    <button @click="sortByPrice">По возрастанию цены</button>
+    <!-- card -->
+    <article :class="{'zero': good.count == 0,'many': good.count > 20, 'not-many': good.count > 1}" v-for="good in goods">
+            <h3>{{ good.title }} </h3>
+            <span>Стоимость: {{ good.price }} </span> 
+         
+    </article>
+    <!--  -->
+    </div>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

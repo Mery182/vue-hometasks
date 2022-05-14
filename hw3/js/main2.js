@@ -53,7 +53,7 @@ Vue.createApp({
         services,
         total: 0,
         chooseServices: [],
-        isChoose:false
+        
       }
   }
 }).mount('#app');

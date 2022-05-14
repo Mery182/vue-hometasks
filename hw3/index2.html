@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main2.css">
+    <!-- vue  -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <!--  -->
+</head>
+
+<body>
+
+<h2>Услуги и стоимость</h2>
+    <div id="app">
+        <!--  left blok -->
+        <div>
+<h3>Выберите услугу из списка:</h3>
+            <ul class="choose-from-list">
+                <li  @click="this.total += service.price, chooseServices.push(service) " v-for="service in services">
+                    <h4>{{service.title}} </h4>
+                    <span>Стоимость: {{service.price}} </span>
+                </li>
+            </ul>
+        </div>
+        <!-- the end -->
+
+        <!-- total price -->
+        <div class="total">
+           <h3> Выбранные вами услуги:</h3>
+            <ul class="total-sum">
+                <li @click="this.total -= choose.price, chooseServices.pop(choose) " v-for="choose in chooseServices">{{choose.title}} -
+                    {{choose.price}}</li>
+            </ul>
+            <h3> Итоговая цена: {{ total }}</h3>
+        </div>
+        <!-- the end -->
+    </div>
+
+
+    <script src="js/main2.js"></script>
+</body>
+
+</html>

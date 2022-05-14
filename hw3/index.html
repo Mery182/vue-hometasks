@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- vue  -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <!--  -->
+</head>
+
+<body>
+
+
+    <div id="app">
+        <div>
+            <input v-model="search" type="text" autocomplete="off" placeholder="Поиск статьи">
+            <svg width="20" height="20" class="icon" viewBox="0 0 20 20">
+                <path
+                    d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
+                    stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg>
+        </div>
+        <ul>
+            <li v-for="article in filteredBlogs">
+                <h3>{{ article.title }} </h3>
+            </li>
+        </ul>
+
+    </div>
+
+
+
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

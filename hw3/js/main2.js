@@ -55,10 +55,5 @@ Vue.createApp({
         chooseServices: [],
         isChoose:false
       }
-  },
-  methods: {
-   plusTotal(){
-       return this.chooseServices.push(this);
-   }
   }
 }).mount('#app');

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/gallery-style.css">
+    <!-- vue -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <!--  -->
+</head>
+
+<body>
+    <!--  -->
+    <div id="gallery">
+        <!-- add image -->
+        <form @submit.prevent>
+            <h2>Добавить картинку:</h2>
+            <span>{{error}} </span>
+            <span>{{error_path}}</span>
+            <div class="input-all">
+                <input type="text" v-model="title" @input="inputTitle" placeholder="Название картинки">
+                <input type="text" v-model="path" @input="inputLink" placeholder="Ссылка на картинку">
+                <button @click="createImage">Загрузить </button>
+
+            </div>
+        </form>
+
+        <!-- start gallery -->
+        <div class="image-blok">
+
+            <blok-gallery v-for="item in images" v-bind:card="item" @send-image="showChildDelete">
+            </blok-gallery>
+
+        </div>
+    </div>
+
+    <script src="js/gallery-vue.js"></script>
+</body>
+
+</html>
